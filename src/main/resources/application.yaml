@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: reservation
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/reservation
+    username: kidari
+    password: kidari_pass
+  jpa:
+    properties:
+      hibernate.globally_quoted_identifiers: true
+      hibernate.jdbc.batch_versioned_data: false
+      hibernate.format_sql: true
+    show-sql: true
+    open-in-view: false
+  flyway:
+    baselineOnMigrate: false
+    locations: classpath:db/mysql
+
